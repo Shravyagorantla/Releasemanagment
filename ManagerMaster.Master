@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ManagerMaster.master.cs" Inherits="Releasemanagment.ManagerMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/AddProject.aspx" Text="Add Project" Value="Add Project"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/AssignProject.aspx" Text=" Assign Project to TeamLeads " Value=" Assign Project to TeamLeads "></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/View TeamLeads.aspx" Text="View TeamLeads" Value="View TeamLeads"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="~/View All Projects.aspx" Text="View All Projects" Value="View All Projects"></asp:MenuItem>
+                <asp:MenuItem Text="Add TeamLead/Developer/Tester" Value="Add TeamLead/Developer/Tester" NavigateUrl="~/Add Employee.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
